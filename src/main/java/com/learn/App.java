@@ -16,11 +16,12 @@ public class App
         app.code();
 
         Laptop laptop = (Laptop)context.getBean("lap");
-        laptop.ram=8;
+//        laptop.ram=8;
         //Singleton sing object on the whole
         //<bean id="lap" class="com.learn.Laptop" scope="prototype"></bean>  multiple object diff values for each
         Laptop laptop2 = (Laptop)context.getBean("lap");
 
-        System.out.println(app.user);
+        System.out.println(laptop.processor.core);
+        System.out.println(laptop.processor.name);
     }
 }
