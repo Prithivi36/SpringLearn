@@ -4,11 +4,13 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="app" class="com.learn.MainApp">
+<!--    <bean id="app" class="com.learn.MainApp" autowire="byName">-->
+    <bean id="app" class="com.learn.MainApp" autowire="byType">
         <property name="user" value="Jhon Doe"/>
-        <property name="laptop" ref="lap"/>
+<!--        <property name="computer" ref="desktop"/>-->
+<!--        <property name="computer" ref="lap"/>-->
     </bean>
-    <bean id="lap" class="com.learn.Laptop">
+    <bean id="lap" class="com.learn.Laptop" primary="true">
 <!--        Order Based -->
 <!--        <constructor-arg value="8"></constructor-arg>-->
 <!--        <constructor-arg ref="processor"></constructor-arg>-->
@@ -23,5 +25,6 @@
         <constructor-arg name="name" value="Intel"></constructor-arg>
         <constructor-arg name="core" value="16"></constructor-arg>
     </bean>
+    <bean id="computer" class="com.learn.Desktop"></bean>
 
 </beans>

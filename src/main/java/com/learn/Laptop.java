@@ -1,6 +1,6 @@
 package com.learn;
 
-public class Laptop {
+public class Laptop implements Computer {
     int ram;
     Processor processor;
     public Laptop() {
@@ -10,6 +10,7 @@ public class Laptop {
         this.ram = ram;
         this.processor = processor;
     }
+    @Override
     public void compile(){
         System.out.println("Compiling using Laptop...");
     }

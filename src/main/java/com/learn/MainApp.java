@@ -2,17 +2,17 @@ package com.learn;
 
 public class MainApp {
     String user;
-    Laptop laptop;
+    Computer computer;
     public MainApp() {
         System.out.println("Main Created!");
     }
 
-    public Laptop getLaptop() {
-        return laptop;
+    public Computer getComputer() {
+        return computer;
     }
 
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
+    public void setComputer(Computer computer) {
+        this.computer = computer;
     }
 
     public void setUser(String user) {
@@ -25,5 +25,6 @@ public class MainApp {
 
     public void code(){
         System.out.println("Coding...");
+        computer.compile();
     }
 }
