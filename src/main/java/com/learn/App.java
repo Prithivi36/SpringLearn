@@ -21,6 +21,6 @@ public class App
         //<bean id="lap" class="com.learn.Laptop" scope="prototype"></bean>  multiple object diff values for each
         Laptop laptop2 = (Laptop)context.getBean("lap");
 
-        System.out.println(laptop2.ram);
+        System.out.println(app.user);
     }
 }

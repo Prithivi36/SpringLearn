@@ -4,7 +4,10 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="app" class="com.learn.MainApp"></bean>
-    <bean id="lap" class="com.learn.Laptop" scope="prototype"></bean>
+    <bean id="app" class="com.learn.MainApp">
+        <property name="user" value="Jhon Doe"/>
+        <property name="laptop" ref="lap"/>
+    </bean>
+    <bean id="lap" class="com.learn.Laptop"></bean>
 
 </beans>
