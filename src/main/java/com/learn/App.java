@@ -13,5 +13,14 @@ public class App
     {
         ApplicationContext context= new ClassPathXmlApplicationContext("spring.xml");
         MainApp app = (MainApp)context.getBean("app");
+        app.code();
+
+        Laptop laptop = (Laptop)context.getBean("lap");
+        laptop.ram=8;
+        //Singleton sing object on the whole
+        //<bean id="lap" class="com.learn.Laptop" scope="prototype"></bean>  multiple object diff values for each
+        Laptop laptop2 = (Laptop)context.getBean("lap");
+
+        System.out.println(laptop2.ram);
     }
 }
