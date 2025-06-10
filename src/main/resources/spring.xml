@@ -15,16 +15,24 @@
 <!--        <constructor-arg value="8"></constructor-arg>-->
 <!--        <constructor-arg ref="processor"></constructor-arg>-->
 
-        <constructor-arg type="com.learn.Processor" ref="processor"></constructor-arg>
+        <constructor-arg type="com.learn.Processor" >
+            <bean id="processor" class="com.learn.Processor">
+                <!--        <constructor-arg index="0" value="16"></constructor-arg>-->
+                <!--        <constructor-arg index="1" value="Intel"></constructor-arg>-->
+
+                <constructor-arg name="name" value="Intel"></constructor-arg>
+                <constructor-arg name="core" value="16"></constructor-arg>
+            </bean>
+        </constructor-arg>
         <constructor-arg type="int" value="8"></constructor-arg>
     </bean>
-    <bean id="processor" class="com.learn.Processor">
-<!--        <constructor-arg index="0" value="16"></constructor-arg>-->
-<!--        <constructor-arg index="1" value="Intel"></constructor-arg>-->
+<!--    <bean id="processor" class="com.learn.Processor">-->
+<!--        &lt;!&ndash;        <constructor-arg index="0" value="16"></constructor-arg>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <constructor-arg index="1" value="Intel"></constructor-arg>&ndash;&gt;-->
 
-        <constructor-arg name="name" value="Intel"></constructor-arg>
-        <constructor-arg name="core" value="16"></constructor-arg>
-    </bean>
-    <bean id="computer" class="com.learn.Desktop"></bean>
+<!--        <constructor-arg name="name" value="Intel"></constructor-arg>-->
+<!--        <constructor-arg name="core" value="16"></constructor-arg>-->
+<!--    </bean>-->
+    <bean id="computer" class="com.learn.Desktop" lazy-init="true"></bean>
 
 </beans>
